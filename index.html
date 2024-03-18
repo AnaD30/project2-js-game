@@ -17,19 +17,18 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <title>Title</title>
   </head>
   <body>
-    <div id ="gameDiv">
-      <h1 class ="gameText" id="playerText">Player:</h1>
-      <h1 class="gameText" id="computerText">Computer:</h1>
-      <h1 class="gameText" id="resultText">Result:</h1>
-
-      <button class="choiceBtn">Rock</button>
-      <button class="choiceBtn">Paper</button>
-      <button class="choiceBtn">Scissors </button>
+    <h1>Rock- Paper -Scissors</h1>
+    <div class="choices">
+      <button onclick="playGame('rock')">👊</button>
+      <button onclick="playGame('paper')">✋</button>
+      <button onclick="playGame('scissors')">✌️</button>
     </div>
+    <div id="playerDisplay">Player:</div>
+    <div id="computerDisplay">Computer:</div>
+    <div id="resultDispay">It's is a tie!</div>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>
