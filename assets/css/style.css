@@ -1,71 +1,89 @@
 /*global style*/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap")
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap") * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*main structure*/
 
-body{
-    font-family:roboto-condensed, sans-serif;
-    font-weight: bold;
-    margin: 0;
-    padding:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(36, 91, 136, 0.411);
+body {
+  font-family: roboto-condensed, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(36, 91, 136, 0.411);
 }
 
-header{
-    background-color:#ffff;
+header {
+  background-color: #ffff;
 }
 
-header > h1{
-    font-size: 3rem;
-    color: #131111;
+header > h1 {
+  font-size: 3rem;
+  color: #131111;
 }
 
 /*game area and buttons*/
 
-.choices{
-    margin-bottom: 30px;
+.choices {
+  margin-bottom: 30px;
 }
 
-.choices button{
-    font-size: 7.5rem;
-    min-width: 160px;
-    margin: 0 10px;
-    border-radius: 250px;
-    background-color: rgb(43, 156, 212);
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+.choices button {
+  font-size: 7.5rem;
+  min-width: 160px;
+  margin: 0 10px;
+  border-radius: 250px;
+  background-color: rgb(43, 156, 212);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
-.choices button:hover{
-    background-color: #1b75a1;
+.choices button:hover {
+  background-color: #1b75a1;
 }
 
-#playerDisplay, #computerDisplay{
-    font-size: 2.5rem;
+#playerDisplay,
+#computerDisplay {
+  font-size: 2.5rem;
 }
 
-#resultDisplay{
-    font-size: 5rem;
-    margin: 30px 0;
+#resultDisplay {
+  font-size: 5rem;
+  margin: 30px 0;
 }
 
-.scoreDisplay{
-    font-size: 2rem;
+/*score board diplay*/
+
+.scoreDisplay {
+  font-size: 2rem;
 }
 
-.lightblueText, #playerScoreDisplay{
-    color: rgb(18, 135, 155);
+.lightblueText,
+#playerScoreDisplay {
+  color: rgb(18, 135, 155);
 }
 
-.darkblueText, #computerScoreDisplay{
-    color: #4162aa;
+.darkblueText,
+#computerScoreDisplay {
+  color: #4162aa;
+}
+
+/*footer*/
+footer {
+  height: 150px;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h3 {
+  align-items: center;
 }

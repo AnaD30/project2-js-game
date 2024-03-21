@@ -1,5 +1,8 @@
 // Rock Paper Scissors 
-
+/**
+ * Declare constants for Dom elements
+ * and possible choices
+ */
 const choices = ["rock", "paper", "scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
@@ -30,7 +33,9 @@ function playGame(playerChoice){
                 break;
         }
     }
-
+/**
+ * main game function.
+ */
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
