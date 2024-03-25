@@ -14,24 +14,74 @@ body {
   margin: 0;
   padding: 20px;
   display: flex;
+  height:100%;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(36, 91, 136, 0.411);
+  background-color: rgba(171, 184, 197, 0.411);
 }
 
-header {
-  background-color: #ffff;
+.noclick {
+  pointer-events: none;
+}
+.mainheader{
+font-size:30px;
+margin: auto;
 }
 
-header > h1 {
-  font-size: 3rem;
+.logo {
+  align-content: center;
+  font-size: 4rem;
+  align-items: center;
+  margin-bottom: auto;
   color: #131111;
+}
+
+/*menu area*/
+.btn --blue,--darkblue,--gray{
+  border: none;
+  text-align:center;
+  cursor: pointer;
+  padding: 25px 80px;
+  margin: 25px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  background-color:rgb(38, 38, 38);
+  border: solid 1px transparent;
+  border-radius:10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  position:relative;
+  width:350px;
+  margin:auto;
+  overflow:hidden;
+  background-color:#1d1d1d;
+  height:90%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*game area and buttons*/
 
 .choices {
   margin-bottom: 30px;
+  margin-top: auto;
 }
 
 .choices button {
@@ -61,7 +111,11 @@ header > h1 {
 /*score board diplay*/
 
 .scoreDisplay {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+#playerScore {
+  font-size: 1.5rem;
 }
 
 .lightblueText,
@@ -84,6 +138,25 @@ footer {
   justify-content: center;
 }
 
-h3 {
-  align-items: center;
+p {
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*media query for small screens(320px nad smaller)*/
+@media (max-width: 320px) {
+  header > h1 {
+    font-size: 1rem;
+  }
+  .choices-buttons {
+    width: 20px;
+    border-radius: 200px;
+  }
+  #playerDisplay {
+    font-size: 1.5rem;
+  }
+  #resultDisplay {
+    font-size: 3rem;
+  }
 }

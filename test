@@ -1,0 +1,31 @@
+
+    
+</div>
+  <section>
+      <button id="rock">
+        <i class="fa-regular fa-hand-back-fist noclick"></i>
+      </button>
+      <button id="paper">
+        <i class="fa-regular fa-hand noclick"></i>
+      </button>
+      <button id="scissors">
+        <i class="fa-regular fa-hand-scissors noclick"></i>
+      </button>
+    </section>
+    <div class="choices">
+    </div>
+    <div id="playerDisplay">Player:</div>
+    <div id="computerDisplay">Computer:</div>
+    <div id="resultDisplay">It's is a tie!</div>
+    <div class="scoreDisplay">
+      Player Score:<span id="playerScoreDisplay">yes</span>
+    </div>
+    <div class="scoreDisplay">
+      Computer Score:<span id="computerScoreDisplay">0</span>
+    </div>
+    <p id="action-messeage">Make your Move!</p> 
+  <footer>
+    <h3>Rules of the Game</h3>
+    <br>
+    <p>Paper covers Rock|Scissors cut Paper|Rock blunts Scissors</p>
+  </footer>
