@@ -1,28 +1,124 @@
 /*global style*/
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-*{
-  margin:0;
-  padding:0;
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: robot-condensed, sans-serif;
 }
 
-/*media-query for larger screens(from 992px and up)*/
-@media(max-width:992px){
-  .navbar .links,
-  .navbar .action_btn{
-    display:none;
-  }
-
-  .navbar.toggle_btn{
-    display:block;
-  }
+:root {
+  --navbar-bg-color: rgb(113, 31, 138);
+  --navbar-text-color: #dfdfdf;
+  --navbar-text-color-focus: #ffff;
+  --navbar-bg-contrast: #5a125a;
 }
 
-/*media-query for smaller screens(from 576px and down)*/
-@media(max-width:567px){
-  .dropdown_menu{
-    left:2rem;
-    width:unset;
-    }
+body {
+  height: 100vh;
+  font-family: robot-condensed, sans-serif;
+  line-height: 1.6;
+  background-image: url(../images/neon-crystals.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1000px;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*menu area styling*/
+
+
+/*game and the new version game section plus the rules*/
+.noclick {
+  pointer-events: none;
+}
+
+.red{ 
+  background-color: red;
+  height:400px;
+  width:100%;
+
+}
+
+
+
+.choices {
+  margin-bottom: 30px;
+}
+
+.choices button {
+  font-size: 4rem;
+  min-width: 1000px;
+  margin: 0 10px;
+  border-radius: 200px;
+  background-color: #a22fcf;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.choices button:hover {
+  background-color: rgb(102, 125, 255);
+}
+#playerDisplay,
+#computerDisplay {
+  font-size: 1.5rem;
+}
+#resultDisplay {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.scoreDisplay {
+  font-size: 2rem;
+}
+.lightpurpleText,
+#playerScoreDisplay {
+  color: rgb(200, 144, 218);
+}
+.darkpurpleText,
+#computerScoreDisplay {
+  color: rgb(158, 117, 234);
+}
+
+/*footer*/
+
+footer {
+  height: 150px;
+}
+
+.social-networks {
+  text-align: center;
+}
+
+.social-networks > li {
+  display: inline;
+}
+
+.social-networks i {
+  font-size: 160%;
+  margin: 1%;
+  padding: 5%;
+  color: #dfdfdf;
+}
+
+/*media query for small screens(360px and up)*/
+@media screen and (min-width: 360px) {
+  
+}
+
+/*media query for tablet size screens(700px and down)*/
+@media screen and (min-width: 700px) {
+  
 }

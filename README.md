@@ -13,6 +13,8 @@ The goal of this website to bring to the user a interactive game. That also make
 
 ## Existing Features:
 
+## The landing page image
+
 ### Menu :
 
 Fully responsive menu with the classic version of Rock, paper,scissor that lets the user experience a game simple but enjoyable no matter the age.
@@ -35,7 +37,8 @@ The rock is a closed fist; paper is a flat hand with fingers and thumb extended 
 #### The new version with lizard,spock:
 The rules are like those of the basic Rock Paper Scissors game, but with 2 extra movements. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and rock crushes scissors.
 
-## The landing page image
+# Footer
+The footer section includes links to the relevant social media sites for Roshambo. The links will open to a new tab to allow easy navigation for the user. The footer is valuable to the user as it encourages them to keep connected via social media.
 
 ### Validator Testing
 CSS
@@ -46,9 +49,27 @@ JAVASCRIPT
 
 ## Solved Bugs
 
+The biggest problem, is been the menu part . To set it up because it didn't want to work and aldo attaching the context behind it.
+
 # Credits
+To provide the best visitor experience we also look up for external links.
 
 # Content
+
+Instructions on how to implement form validation on the Sign-Up page were taken from a learning platform: W3SCHOOLS,Blog sites,Newsletter sites and Youtube:
+
+W3SCHOOLS
+
+Newsletter site:Medium,Ah,Dev
+Key knowledge about the Menu assembly and the responsivnes.
+
+Youtube chanel:n Bro Code
+
+The knowledge for practical use of Javascript. Additional information of the f of Roshambormationo(Rock, paper, scissors).
+
+Font Awesome
+
+Diverse icons were used from this site.
 
 # Deployment
 
@@ -57,3 +78,5 @@ JAVASCRIPT
 In the GitHub repository, navigate to the Settings tab
 From the source section drop-down menu, select the Master Branch
 Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+[https://anad30.github.io/project2-js-game/](Project 2 - game)
