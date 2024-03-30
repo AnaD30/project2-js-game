@@ -8,15 +8,8 @@
   font-family: robot-condensed, sans-serif;
 }
 
-:root {
-  --navbar-bg-color: rgb(113, 31, 138);
-  --navbar-text-color: #dfdfdf;
-  --navbar-text-color-focus: #ffff;
-  --navbar-bg-contrast: #5a125a;
-}
-
 body {
-  height: 100vh;
+  height: 110vh;
   font-family: robot-condensed, sans-serif;
   line-height: 1.6;
   background-image: url(../images/neon-crystals.jpg);
@@ -24,20 +17,9 @@ body {
   background-position: center;
 }
 
-main {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/*header*/
 
-.container {
-  max-width: 1000px;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 /*menu area styling*/
 
@@ -47,21 +29,13 @@ main {
   pointer-events: none;
 }
 
-.red{ 
-  background-color: red;
-  height:400px;
-  width:100%;
-
-}
-
-
 
 .choices {
   margin-bottom: 30px;
 }
 
 .choices button {
-  font-size: 4rem;
+  font-size: 6rem;
   min-width: 1000px;
   margin: 0 10px;
   border-radius: 200px;
@@ -70,7 +44,7 @@ main {
   transition: background-color 0.5s ease;
 }
 .choices button:hover {
-  background-color: rgb(102, 125, 255);
+  background-color: rgb(229, 102, 255);
 }
 #playerDisplay,
 #computerDisplay {
@@ -85,17 +59,17 @@ main {
 }
 .lightpurpleText,
 #playerScoreDisplay {
-  color: rgb(200, 144, 218);
+  color: #c890da;
 }
 .darkpurpleText,
 #computerScoreDisplay {
-  color: rgb(158, 117, 234);
+  color: #9e75ea;
 }
 
 /*footer*/
 
 footer {
-  height: 150px;
+  height: 100px;
 }
 
 .social-networks {
@@ -107,7 +81,7 @@ footer {
 }
 
 .social-networks i {
-  font-size: 160%;
+  font-size: 120%;
   margin: 1%;
   padding: 5%;
   color: #dfdfdf;
@@ -118,7 +92,7 @@ footer {
   
 }
 
-/*media query for tablet size screens(700px and down)*/
-@media screen and (min-width: 700px) {
+/*media query for tablet size screens(992px and down)*/
+@media screen and (min-width: 922px) {
   
 }

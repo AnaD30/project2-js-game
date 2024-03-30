@@ -10,43 +10,126 @@
     <link rel="stylesheet" href="assets/css/style.css" /> 
     <title>Roshambo</title>
   </head>
+  <header>
+    <div id="main-title">  
+    <h1>Roshambo<i class="fa-solid fa-ghost"></i></h1>
+    <h2>Welcome</h2>
+     <p>Let's  start the adventure</p>
+    </div>
+     </header>
   <body >
-          <button id="rock">
-            <i class="fa-regular fa-hand-back-fist noclick"></i>
-          </button>
-          <button id="paper">
-            <i class="fa-regular fa-hand noclick"></i>
-          </button>
-          <button id="scissors">
-            <i class="fa-regular fa-hand-scissors noclick"></i>
-          </button>
-      
-        <div class="choices">
-        </div>
-        <div id="playerDisplay">Player:</div>
-        <div id="computerDisplay">Computer:</div>
-        <div id="resultDisplay">It's is a tie!</div>
-        <div class="scoreDisplay">
-          Player Score:<span id="playerScoreDisplay">0</span>
-        </div>
-        <div class="scoreDisplay">
-          Computer Score:<span id="computerScoreDisplay">0</span>
-        </div>
-        <p id="action-messeage">Make your Move!</p> 
-        </div>
+    <main>
+      <div>
+      <section id="game-container">
+        <button id="play-game">Play Game</button>
+      </div>
+      <div class="roshambo">
+        <button id="rock">
+          <i class="fa-regular fa-hand-back-fist noclick"></i>
+        </button>
+        <button id="paper">
+          <i class="fa-regular fa-hand noclick"></i>
+        </button>
+        <button id="scissors">
+          <i class="fa-regular fa-hand-scissors noclick"></i>
+        </button> 
+      </div>
+      <div class="choices">
+      </div>
+      <div id="playerDisplay">Player:</div>
+      <div id="computerDisplay">Computer:</div>
+      <div id="resultDisplay">It's is a tie!</div>
+      <div class="scoreDisplay">
+        Player Score:<span id="playerScoreDisplay">0</span>
+      </div>
+      <div class="scoreDisplay">
+        Computer Score:<span id="computerScoreDisplay">0</span>
+      </div>
+      <p id="action-messeage">Make your Move!</p> 
+      </div>
+      <div id="close-container">
+      <div class="callout" data-closable>
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </div>
-  </header>
-  <main>
-    <section id="game-container">
-    <h2>Welcome</h2>
-    <p>Let's  start the adventure</p>
+    </section>
     <div>
-      <button id="play-game">Play Game</button>
+    <section id="game-container2">
+      <button id="play-game2">Play Game 2</button>
     </div>
-  </section>
+      <div class="roshambo2">
+        <button id="rock">
+          <i class="fa-regular fa-hand-back-fist noclick"></i>
+        </button>
+        <button id="paper">
+          <i class="fa-regular fa-hand noclick"></i>
+        </button>
+        <button id="scissors">
+          <i class="fa-regular fa-hand-scissors noclick"></i>
+        </button> 
+        <button id="lizard">
+           <i class="fa-regular fa-hand-lizard noclick"></i>
+        </button>
+        <button id="spock">
+        <i class="fa-regular fa-hand-spock noclick"></i>
+      </button>
+      </div>
+      <div class="choices">
+      </div>
+      <div id="playerDisplay">Player:</div>
+      <div id="computerDisplay">Computer:</div>
+      <div id="resultDisplay">It's is a tie!</div>
+      <div class="scoreDisplay">
+        Player Score:<span id="playerScoreDisplay">0</span>
+      </div>
+      <div class="scoreDisplay">
+        Computer Score:<span id="computerScoreDisplay">0</span>
+      </div>
+      <p id="action-messeage">Make your Move!</p> 
+      </div>
+      <div id="close-container2">
+      <div class="callout2" data-closable>
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    </section>
+    <section id="rules-container">
+      <button id="rules">Rules of the game</button>
+      <p class="old-version">
+        The players may start by counting to three aloud, or by speaking the name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand in a fist and swinging it down with each syllable onto their other hand (or in a less common variant, holding it behind their back). They then "throw" or "shoot" by extending their selected sign towards their opponent on what would have been the fourth count, often saying the word "shoot" while doing so.
+      </p>
+      <p class="new-version">
+        The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found.
+
+Almost always, the boys will all pick Spock at the same time and tie over and over again.
+
+Scissors cuts Paper
+Paper covers Rock
+Rock crushes Lizard
+Lizard poisons Spock
+Spock smashes Scissors
+Scissors decapitates Lizard
+Lizard eats Paper
+Paper disproves Spock
+Spock vaporizes Rock
+(and as it always has) Rock crushes Scissors
+
+      </p>
+      <div id="close-container3">
+        <div class="callout3" data-closable>
+          <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </section>
+    </main>
+
   <script src="assets/js/script.js"></script>
-  </main>
+
       <!--Footer-->
       <footer>
         <ul class="social-networks">
