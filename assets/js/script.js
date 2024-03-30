@@ -4,25 +4,25 @@
 //Menu area responsiveness coneccted to Javascript
 let playGameBtn = document.getElementById("play-game");
 let container = document.getElementById("game-container");
-let game = "<div class='Roshambo'></div>";
+let game = "<div class='roshambo'></div>";
 let closeContainer = document.getElementById("close-container");
-let close = "<div class='callout'></div>"
+let closeInnerContainer = "<div class='callout'></div>"
 
 let playGame2Btn = document.getElementById("play-game2");
-let game2 = "<div class='Roshambo2'></div>";
+let game2 = "<div class='roshambo2'></div>";
 
 let close2 = "<div class='callout2'></div>"
 let closeContainer2 = document.getElementById("close-container2");
 
 playGameBtn.addEventListener('click', insurtGame);
-playGame2Btn.addEventListener('click', insurtGame);
+playGame2Btn.addEventListener('click', insurtGame2);
 
 function insurtGame() {
     container.innerHTML = game;
-    close.innerHTML = close;
+    closeContainer.innerHTML = closeInnerContainer;
 }
 
-function insurtGame() {
+function insurtGame2() {
     container.innerHTML = game2;
     close2.innerHTML = close2;
 }
@@ -33,11 +33,13 @@ function insurtGame() {
  * and possible choices
  * */
 
-const choices = ["rock", "paper", "scissors","lizard","spock" ];
+const choices = ["rock", "paper", "scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
 const logo = document.getElementById("logo");
 
 const rockButton = document.getElementById('rock');
@@ -51,6 +53,7 @@ scissorsButton.addEventListener('click', playGame);
 /**
  * second part of the choices,connected to the game 2
  */
+const choices2 = ["rock", "paper", "scissors","lizard","spock" ];
 const lizardButton = document.getElementById('lizard');
 const spockButton = document.getElementById('spock');
 
@@ -69,30 +72,33 @@ function playGame(event) {
     console.log(event);
     let playerChoice = event.target.id;
     console.log(playerChoice);
+    generateComputerChoice(choices, playerChoice);
 }
 
-const computerChoice = choices[Math.floor(Math.random() * 5)];
-let result = "";
+function generateComputerChoice(choices, playerChoice){
+    let computerChoice = choices[Math.floor(Math.random()* choices.length)];
+    calculateWinner(computerChoice,playerChoice);
+
+} 
+
 
 
 /**
  * Gets the score for the second game  from the DOM and 
  * gets the second tally of incorrect answers from the DOM 
  **/2
-function playGame(event) {
+function playGame2(event) {
     console.log(event);
     let playerChoice = event.target.id;
     console.log(playerChoice);
 }
 
-const computerChoice = choices[Math.floor(Math.random() * 5)];
-let result = "";
 
 
 /**
  * Gets the current tally of incorrect answers from the DOM 
  */
-
+function calculateWinner(computerChoice, playerChoice){
 if (playerChoice === computerChoice) {
     result = "IT'S A TIE!";
 } else {
@@ -108,11 +114,12 @@ if (playerChoice === computerChoice) {
             break;
     }
 }
-
+updateScores(result, computerChoice, playerChoice)
+}
 /**
  * Gets the current tally of incorrect answers from the DOM 
  */
-
+/** 
 if (playerChoice === computerChoice) {
     result = "IT'S A TIE!";
 } else {
@@ -129,15 +136,17 @@ if (playerChoice === computerChoice) {
         case "lizard":
             result = (computerChoice === "rock") ? "YOU WIN!" : "Want to Quit!";
             break;
-        case "spock"
-        result = (computerChoice === "paper") ? "YOU WIN!": "Want to Quit!";
+        case "spock":
+            result = (computerChoice === "paper") ? "YOU WIN!": "Want to Quit!";
             
     }
 }
+*/
 
 /**
  * main game function
  */
+function updateScores(result, computerChoice, playerChoice){
 playerDisplay.textContent = `PLAYER: ${playerChoice}`;
 computerDisplay.textContent = `Computer: ${computerChoice}`;
 resultDisplay.textContent = result;
@@ -150,9 +159,28 @@ switch (result) {
         playerScore++;
         playerScoreDisplay.textContent = playerScore;
         break;
-    case "Want to QUIT?":
+    case "Want to Quit!":
+        console.log("updateComputerScore");
+        console.log(computerScore);
         resultDisplay.classList.add("lightvioletText");
         computerScore++;
+        console.log(computerScore);
         computerScoreDisplay.textContent = computerScore;
         break;
+}
+checkForOverallWinner()
+}
+
+function checkForOverallWinner(){
+    let winningScore = 5;
+    if (playerScore >= winningScore){
+        //add player wins pop message 
+        console.log("player-won-overall");
+    } else if(computerScore >= winningScore){
+        //add player loses haha pop message
+        console.log("computer-won-haha");
+    }else{
+        //when nobody won overall
+        console.log("play-next-round");
+    }
 }

@@ -18,7 +18,18 @@ body {
 }
 
 /*header*/
+#main-title{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color:#dfdfdf;
+  display: flex;
+  justify-content: center;
+}
 
+h1{
+font-size: 4rem;
+color:#e17cf5;
+}
 
 
 /*menu area styling*/
