@@ -24,7 +24,7 @@ function insurtGame() {
 
 function insurtGame2() {
     container.innerHTML = game2;
-    close2.innerHTML = close2;
+    closeContainer2.innerHTML = closeInnerContainer2;
 }
 
 
@@ -81,8 +81,6 @@ function generateComputerChoice(choices, playerChoice){
 
 } 
 
-
-
 /**
  * Gets the score for the second game  from the DOM and 
  * gets the second tally of incorrect answers from the DOM 
@@ -92,8 +90,6 @@ function playGame2(event) {
     let playerChoice = event.target.id;
     console.log(playerChoice);
 }
-
-
 
 /**
  * Gets the current tally of incorrect answers from the DOM 
@@ -116,6 +112,7 @@ if (playerChoice === computerChoice) {
 }
 updateScores(result, computerChoice, playerChoice)
 }
+
 /**
  * Gets the current tally of incorrect answers from the DOM 
  */
