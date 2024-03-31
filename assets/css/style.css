@@ -19,21 +19,34 @@ body {
 
 /*header*/
 #main-title{
-  margin-top: 20px;
-  margin-bottom: 30px;
-  color:#dfdfdf;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
 }
 
 h1{
-font-size: 4rem;
 color:#e17cf5;
 }
 
 
 /*menu area styling*/
+#game-container{
+  font-size: 4rem;
+  width: 100px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
+#play-game{
+  display: flex;
+    font-size: 30px;
+    margin-right: 50%;
+    margin-left: 50%;
+    background-color: rgba(110, 25, 110, 0.626);
+    border-radius: 10px;
+}
 
 /*game and the new version game section plus the rules*/
 .noclick {
