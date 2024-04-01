@@ -29,6 +29,9 @@ h1 {
 }
 
 /*menu area styling*/
+.roshambo{
+  display: none;
+}
 
 #game-container {
   font-size: 2rem;
@@ -105,6 +108,10 @@ h1 {
 }
 
 /*styling for the second game*/
+.roshambo2{
+  display: none;
+}
+
 #game-container2 {
   font-size: 2rem;
   border-radius: 40px;
@@ -166,6 +173,10 @@ h1 {
 }
 
 /*styling for the last button-container area*/
+.instructions {
+  display: none;
+}
+
 #rules{
   font-size: 2rem;
   padding: 20px 24px;
@@ -221,6 +232,20 @@ p{
 
 /*footer*/
 
+#social-networks {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#social-networks i {
+  font-size: 60%;
+  padding: 5%;
+  color: #fdfdfd;
+}
+
 /*media query for small screens(360px and up)*/
 @media screen and (min-width: 360px) {
   #main-title {
@@ -228,8 +253,11 @@ p{
   }
 
   #play-game, #play-game2, #rules {
-    font-size: 1rem;
-    padding: 5px 5px;
+    font-size: 2rem;
+    padding: 25px 25px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
   #game-container {
@@ -238,6 +266,13 @@ p{
     padding: 10px;
     display: flex;
     justify-content: center;
+  }
+
+  h1{
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
   }
 
   .choices {
@@ -283,12 +318,16 @@ p{
   }
 }
 
-/*media query for medium size screens (508px and up)*/
-@media screen and (min-width: 508px) {
+/*media query for medium size screens (765px and up)*/
+@media screen and (min-width: 765px) {
 #play-game, #play-game2,#rules {
-  font-size: 1rem;
-  padding: 10px 20px;
+  font-size: 2rem;
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin-top: auto;
+  margin-bottom: 20px;
 }
+
 
 #main-title{
   font-size:1.5rem;
@@ -297,9 +336,14 @@ p{
 
 /*media query for tablet size screens(992px and down)*/
 @media screen and (min-width: 922px) {
+  h1{
+    font-size: 6rem;
+    }
+
   #main-title {
     font-size: 2.5rem;
   }
+
 
   #game-container {
     font-size: 2rem;

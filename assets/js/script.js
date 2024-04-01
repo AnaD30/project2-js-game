@@ -6,10 +6,11 @@ let playGameBtn = document.getElementById("play-game");
 let container = document.getElementById("game-container");
 let game = "<div class='roshambo'></div>";
 let closeContainer = document.getElementById("close-container");
-let closeInnerContainer = "<div class='closegame'></div>"
+let closeInnerContainer = "<div class='closegame'></div>";
+
 
 let playGame2Btn = document.getElementById("play-game2");
-let game2 = "<div class='roshambo2'></div>";
+let game2 = "<div class='roshambo2'>";
 
 let close2 = "<div class='closegame2'></div>"
 let closeContainer2 = document.getElementById("close-container2");
@@ -141,7 +142,7 @@ if (playerChoice === computerChoice) {
             result = (computerChoice === "rock") ? "YOU WIN!" : "Want to Quit!";
             break;
         case "spock":
-            result = (computerChoice === "paper") ? "YOU WIN!": "Want to Quit!";
+            result = (computerChoice === "rock") ? "YOU WIN!": "Want to Quit!";
             
     }
 }
