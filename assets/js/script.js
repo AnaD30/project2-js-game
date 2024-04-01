@@ -4,14 +4,14 @@
 //Menu area responsiveness coneccted to Javascript
 let playGameBtn = document.getElementById("play-game");
 let container = document.getElementById("game-container");
-let game = "<div id='roshambo'></div>";
+let game = "<div class='roshambo'></div>";
 let closeContainer = document.getElementById("close-container");
-let closeInnerContainer = "<div class='callout'></div>"
+let closeInnerContainer = "<div class='closegame'></div>"
 
 let playGame2Btn = document.getElementById("play-game2");
 let game2 = "<div class='roshambo2'></div>";
 
-let close2 = "<div class='callout2'></div>"
+let close2 = "<div class='closegame2'></div>"
 let closeContainer2 = document.getElementById("close-container2");
 
 playGameBtn.addEventListener('click', insurtGame);
@@ -89,7 +89,14 @@ function playGame2(event) {
     console.log(event);
     let playerChoice = event.target.id;
     console.log(playerChoice);
+    generateComputerChoice(choices2, playerChoice);
 }
+
+function generateComputerChoice(choices2, playerChoice){
+    let computerChoice = choices2[Math.floor(Math.random()* choices2.length)];
+    calculateWinner(computerChoice,playerChoice);
+
+} 
 
 /**
  * Gets the current tally of incorrect answers from the DOM 

@@ -17,12 +17,44 @@
      </header>
   <body >
     <main>
-      <div>
       <section id="game-container">
+        <div>
         <button id="play-game">Play Game</button>
       </div>
-      <div id="roshambo"></div>
-      <div class="choices">
+      <div class="roshambo">
+    <div class="choices">
+          <button id="rock">
+            <i class="fa-regular fa-hand-back-fist noclick"></i>
+          </button>
+          <button id="paper">
+            <i class="fa-regular fa-hand noclick"></i>
+          </button>
+          <button id="scissors">
+            <i class="fa-regular fa-hand-scissors noclick"></i>
+          </button> 
+      </div>
+        <div id="playerDisplay">Player:</div>
+        <div id="computerDisplay">Computer:</div>
+        <div id="resultDisplay">It's is a tie!</div>
+        <div class="scoreDisplay">
+          Player Score:<span id="playerScoreDisplay">0</span>
+        </div>
+        <div class="scoreDisplay">
+          Computer Score:<span id="computerScoreDisplay">0</span>
+        <div id="close-container">
+        <div class="out" >
+          <button class="close-button">
+          </button>
+        </div>
+      </div>
+      </div>
+      </section>
+    <section id="game-container2">
+      <div>
+      <button id="play-game2">Play Game 2</button>
+    </div>
+    <div class="roshambo2">
+  <div class="choices2">
         <button id="rock">
           <i class="fa-regular fa-hand-back-fist noclick"></i>
         </button>
@@ -32,7 +64,12 @@
         <button id="scissors">
           <i class="fa-regular fa-hand-scissors noclick"></i>
         </button> 
-      </div>
+        <button id="lizard">
+           <i class="fa-regular fa-hand-lizard noclick"></i>
+        </button>
+        <button id="spock">
+        <i class="fa-regular fa-hand-spock noclick"></i>
+      </button>
     </div>
       <div id="playerDisplay">Player:</div>
       <div id="computerDisplay">Computer:</div>
@@ -43,75 +80,37 @@
       <div class="scoreDisplay">
         Computer Score:<span id="computerScoreDisplay">0</span>
       <div id="close-container">
-      <div class="callout">
+      <div class="closegame">
         <button class="close-button">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+    </div>
+    </div>
+    </section>
+    <section id="rules-container">
+      <button id="rules">Rules of the game</button>
+      <p class="old-version">
+        The players may start by counting to three aloud, or by speaking the name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand in a fist and swinging it down with each syllable onto their other hand (or in a less common variant, holding it behind their back). They then "throw" or "shoot" by extending their selected sign towards their opponent on what would have been the fourth count, often saying the word "shoot" while doing so.
+      </p>
+      <br>
+      <p class="new-version">
+        The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found.
+Almost always, the boys will all pick Spock at the same time and tie over and over again.Scissors cuts Paper,Paper covers Rock,Rock crushes Lizard,
+Lizard poisons Spock,Spock smashes Scissors,Scissors decapitates Lizard,Lizard eats Paper,Paper disproves Spock,
+Spock vaporizes Rock(and as it always has) Rock crushes Scissors.
+      </p>
+      <div id="close-container3">
+        <div class="callout3" >
+          <button class="close-button" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
     </section>
     </main>
 
   <script src="assets/js/script.js"></script>
 
-      <!--Footer-->
-      <footer>
-        <ul class="social-networks">
-          <li>
-            <a
-              href="https://en.wikipedia.org"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit Wikipedia page!(opens in a new tab)"
-              ><i class="fa-brands fa-wikipedia-w"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=iwJ_7XHhXQ8&t=1s&ab_channel=SeeUinHistory%2FMythology"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit our Youtube page!(opens in a new tab)"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="http://www.facebook.com"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit our Facebook page!(opens in a new tab)"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="http://www.twitter.com"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit our Twitter page!(opens in a new tab)"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="http://www.instagram.com"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit our Instagram page!(opens in a new tab)"
-              ><i class="fa-brands fa-square-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.pinterest.com/pin/611434086936677424/"
-              target="_blank"
-              rel="noopner"
-              aria-label="Visit our pinterest page!(opens in a new tab)"
-              ><i class="fa-brands fa-pinterest"></i
-            ></a>
-          </li>
-        </ul>
-      </footer>
       <!--font awesome script-->
       <script
         src="https://kit.fontawesome.com/43b695c197.js"
