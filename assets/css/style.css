@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  color: #e17cf5;
+  color: #c92be9;
 }
 
 /*menu area styling*/
@@ -179,8 +179,86 @@ footer {
 
 /*media query for small screens(360px and up)*/
 @media screen and (min-width: 360px) {
+  #main-title {
+    font-size: 1rem;
+  }
+
+  #game-container {
+    font-size: 0.5rem;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .choices {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  #playerDisplay,
+#computerDisplay {
+  font-size: 1.5rem;
+  margin: 10px 20px 0px;
+  width: 30px;
+  height: 20px;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#resultDisplay {
+  font-size: 1.5rem;
+  margin: 20px 30px 30px;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+}
+.scoreDisplay {
+  font-size: 1.5rem;
+  margin: 20px 30px 20px;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.lightpurpleText,
+#playerScoreDisplay {
+  color: #c890da;
+}
+
+.darkpurpleText,
+#computerScoreDisplay {
+  color: #9e75ea;
+}
 }
 
 /*media query for tablet size screens(992px and down)*/
 @media screen and (min-width: 922px) {
+  #main-title {
+    font-size: 2.5rem;
+}
+
+#game-container {
+  font-size: 2rem;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+#playerDisplay, #computerDisplay {
+  font-size: 2rem;
+}
+
+.scoreDisplay {
+  font-size: 2rem;
+}
+
+#resultDisplay {
+  font-size: 2rem;
+}
+#rock, #paper,#scissors,#lizard,#spock {
+  font-size: 4rem;
+  min-width: 120px;
+}
 }

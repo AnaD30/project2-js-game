@@ -4,7 +4,7 @@
 //Menu area responsiveness coneccted to Javascript
 let playGameBtn = document.getElementById("play-game");
 let container = document.getElementById("game-container");
-let game = "<div class='roshambo'></div>";
+let game = "<div id='roshambo'></div>";
 let closeContainer = document.getElementById("close-container");
 let closeInnerContainer = "<div class='callout'></div>"
 
