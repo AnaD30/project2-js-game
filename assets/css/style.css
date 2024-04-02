@@ -28,11 +28,13 @@ h1 {
   color: #c92be9;
 }
 
-/*menu area styling*/
+/*menu area styling
 .roshambo{
   display: none;
+}*/
+i{
+  font-size: 2rem;
 }
-
 #game-container {
   font-size: 2rem;
   border-radius: 40px;
@@ -107,10 +109,10 @@ h1 {
   cursor: pointer;
 }
 
-/*styling for the second game*/
+/*styling for the second game
 .roshambo2{
   display: none;
-}
+}*/
 
 #game-container2 {
   font-size: 2rem;
@@ -232,19 +234,6 @@ p{
 
 /*footer*/
 
-#social-networks {
-  text-align: center;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-
-#social-networks i {
-  font-size: 60%;
-  padding: 5%;
-  color: #fdfdfd;
-}
 
 /*media query for small screens(360px and up)*/
 @media screen and (min-width: 360px) {
