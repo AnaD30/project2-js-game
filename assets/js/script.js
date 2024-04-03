@@ -1,31 +1,60 @@
 //Rock,paper,scissors,lizard,spock
 
 
-//Menu area responsiveness coneccted to Javascript
+/**Menu area responsiveness coneccted to Javascript*/
+// referingreferring to game 1 or original version
 let playGameBtn = document.getElementById("play-game");
 let container = document.getElementById("game-container");
 let game = "<div class='roshambo'></div>";
+
 let closeContainer = document.getElementById("close-container");
 let closeInnerContainer = "<div class='closegame'></div>";
 
-
-let playGame2Btn = document.getElementById("play-game2");
+//refering to game 2 or version version
+let playGame2Btn = document.getElementById('play-game2');
 let game2 = "<div class='roshambo2'>";
 
 let close2 = "<div class='closegame2'></div>"
-let closeContainer2 = document.getElementById("close-container2");
+let closeInnerContainer2 = document.getElementById("close-container2");
 
 playGameBtn.addEventListener('click', insurtGame);
-playGame2Btn.addEventListener('click', insurtGame2);
 
+//refering to a option of closing the game once inside the game
+closeButton.addEventListener('click', closeGame);
+
+// referring to the second game
+playGame2Btn.addEventListener('click', insurtGame2);
+//closing the second game
+closeButton2.addEventListener('click', closeGame2);
+
+//insurting the game and playing, game 1
 function insurtGame() {
     container.innerHTML = game;
     closeContainer.innerHTML = closeInnerContainer;
 }
 
+//insurting the game and playing, game 2
 function insurtGame2() {
     container.innerHTML = game2;
     closeContainer2.innerHTML = closeInnerContainer2;
+}
+
+// insurtin the container with rules or better said instructions
+let rulesButton = document.getElementById("rules");
+let rulesContainer = document.getElementById("rules-container");
+let rules = "<div class='instructions'></div>"
+
+//closing the instructinstructions part,menu
+let closeButton3 = document.getElementById("close-button3");
+let closeContainer3 = document.getElementById("close-container3");
+let closeInnerContainer3 = "<div class='close-rules'></div>";
+
+
+rulesButton.addEventListener('click', insurtRules);
+closeButton3.removeEventListener('click', closeContainer3);
+function insurtRules(){
+    rulesContainer.innerHTML = rules;
+    closeContainer3.innerHTML = "<div class='close-rules'></div>";
 }
 
 
@@ -50,6 +79,7 @@ const scissorsButton = document.getElementById('scissors');
 rockButton.addEventListener('click', playGame);
 paperButton.addEventListener('click', playGame);
 scissorsButton.addEventListener('click', playGame);
+
 
 /**
  * second part of the choices,connected to the game 2
@@ -96,7 +126,6 @@ function playGame2(event) {
 function generateComputerChoice(choices2, playerChoice){
     let computerChoice = choices2[Math.floor(Math.random()* choices2.length)];
     calculateWinner(computerChoice,playerChoice);
-
 } 
 
 /**
@@ -120,6 +149,7 @@ if (playerChoice === computerChoice) {
 }
 updateScores(result, computerChoice, playerChoice)
 }
+
 
 /**
  * Gets the current tally of incorrect answers from the DOM 
@@ -146,6 +176,7 @@ if (playerChoice === computerChoice) {
             
     }
 }
+
 */
 
 /**
@@ -181,9 +212,11 @@ function checkForOverallWinner(){
     if (playerScore >= winningScore){
         //add player wins pop message 
         console.log("player-won-overall");
+       // playerScoreDisplay.textContent = )
     } else if(computerScore >= winningScore){
         //add player loses haha pop message
         console.log("computer-won-haha");
+       
     }else{
         //when nobody won overall
         console.log("play-next-round");
