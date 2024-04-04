@@ -6,114 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--font awesome and google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <script src="https://kit.fontawesome.com/43b695c197.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css" /> 
+    <script
+      src="https://kit.fontawesome.com/43b695c197.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Roshambo</title>
   </head>
-  <header>
-    <div id="main-title">  
-    <h1>Roshambo<i class="fa-solid fa-ghost"></i></h1>
-    </div>
-     </header>
-  <body >
+  <body>
+    <header>
+      <div id="main-title">
+        <h1>Roshambo<i class="fa-solid fa-ghost"></i></h1>
+      </div>
+    </header>
     <main>
       <section id="game-container">
         <div>
-        <button id="play-game">Play Game</button>
-      </div>
-      <div class="roshambo2">
-    <div class="choices">
-          <button id="rock">
-            <i class="fa-regular fa-hand-back-fist noclick"></i>
-          </button>
-          <button id="paper">
-            <i class="fa-regular fa-hand noclick"></i>
-          </button>
-          <button id="scissors">
-            <i class="fa-regular fa-hand-scissors noclick"></i>
-          </button> 
-      </div>
-        <div id="playerDisplay">Player:</div>
-        <div id="computerDisplay">Computer:</div>
-        <div id="resultDisplay">It's is a tie!</div>
-        <div class="scoreDisplay">
-          Player Score:<span id="playerScoreDisplay">0</span>
+          <button id="play-game">Play Game</button>
         </div>
-        <div class="scoreDisplay">
-          Computer Score:<span id="computerScoreDisplay">0</span>
-         <div id="close-container">
-      <div class="closegame">
-        <button class="close-button">&times
-        </button>
-      </div>
-      </div>
-      </div>
+        <div>
+          <button id="play-game2">Play Game 2</button>
+        </div>
+        <div>
+          <button id="rules">Rules of the game</button> 
+        </div>
       </section>
-    <section id="game-container2">
-      <div>
-      <button id="play-game2">Play Game 2</button>
-    </div>
-    <div class="roshambo2">
-  <div class="choices2">
-        <button id="rock">
-          <i class="fa-regular fa-hand-back-fist noclick"></i>
-        </button>
-        <button id="paper">
-          <i class="fa-regular fa-hand noclick"></i>
-        </button>
-        <button id="scissors">
-          <i class="fa-regular fa-hand-scissors noclick"></i>
-        </button> 
-        <button id="lizard">
-           <i class="fa-regular fa-hand-lizard noclick"></i>
-        </button>
-        <button id="spock">
-        <i class="fa-regular fa-hand-spock noclick"></i>
-      </button>
-    </div>
-      <div id="playerDisplay">Player:</div>
-      <div id="computerDisplay">Computer:</div>
-      <div id="resultDisplay">It's is a tie!</div>
-      <div class="scoreDisplay">
-        Player Score:<span id="playerScoreDisplay">0</span>
-      </div>
-      <div class="scoreDisplay">
-        Computer Score:<span id="computerScoreDisplay">0</span>
-        <div id="close-container2">
-          <div class="closegame2">
-            <button class="close-button2">&times
-            </button>
+      
+      <section id="rules-container">
+        <div class="instructions">
+          <p class="old-version">
+            The players may start by counting to three aloud, or by speaking the
+            name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand
+            in a fist and swinging it down with each syllable onto their other
+            hand (or in a less common variant, holding it behind their back).
+            They then "throw" or "shoot" by extending their selected sign
+            towards their opponent on what would have been the fourth count,
+            often saying the word "shoot" while doing so.
+          </p>
+          <br />
+          <p class="new-version">
+            The game is an expansion on the game Rock, Paper, Scissors. Each
+            player picks a variable and reveals it at the same time. The winner
+            is the one who defeats the others. In a tie, the process is repeated
+            until a winner is found. Almost always, the boys will all pick Spock
+            at the same time and tie over and over again.Scissors cuts
+            Paper,Paper covers Rock,Rock crushes Lizard, Lizard poisons
+            Spock,Spock smashes Scissors,Scissors decapitates Lizard,Lizard eats
+            Paper,Paper disproves Spock, Spock vaporizes Rock(and as it always
+            has) Rock crushes Scissors.
+          </p>
+          <div id="close-container3">
+            <div class="close-rules">
+              <button class="close-button3">&times</button>
+            </div>
           </div>
-          </div>
-    </div>
-    </div>
-    </section>
-    <section id="rules-container">
-      <button id="rules">Rules of the game</button>
-      <div class="instructions">
-      <p class="old-version">
-        The players may start by counting to three aloud, or by speaking the name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand in a fist and swinging it down with each syllable onto their other hand (or in a less common variant, holding it behind their back). They then "throw" or "shoot" by extending their selected sign towards their opponent on what would have been the fourth count, often saying the word "shoot" while doing so.
-      </p>
-      <br>
-      <p class="new-version">
-        The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found.
-        Almost always, the boys will all pick Spock at the same time and tie over and over again.Scissors cuts Paper,Paper covers Rock,Rock crushes Lizard,
-        Lizard poisons Spock,Spock smashes Scissors,Scissors decapitates Lizard,Lizard eats Paper,Paper disproves Spock,
-        Spock vaporizes Rock(and as it always has) Rock crushes Scissors.
-      </p>
-      <div id="close-container3">
-        <div class="close-rules" >
-          <button class="close-button3">&times
-          </button>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
-  <script src="assets/js/script.js"></script>
-      <!--font awesome script-->
-      <script
-        src="https://kit.fontawesome.com/43b695c197.js"
-        crossorigin="anonymous"
-      ></script>
+    <!-- The End Game Modal -->
+    <div id="endModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="modalClose">&times;</span>
+              <h2>Modal Header</h2>
+          </div>
+          <div class="modal-body">
+              <p>PlayerScore</p>
+              <p id="modal-player-score">0</p>
+              <p>ComputerScore</p>
+              <p id="modal-computer-score">0</p>
+              <p id="modal-message">0</p>
+          </div>
+          <div class="modal-footer">
+              <h3>Modal Footer</h3>
+          </div>
+      </div>
+
+  </div>
+    <script src="assets/js/script.js"></script>
+    <!--font awesome script-->
+    <script
+      src="https://kit.fontawesome.com/43b695c197.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

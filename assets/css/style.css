@@ -10,7 +10,6 @@
 
 body {
   height: 100vh;
-  line-height: 1.6;
   background-image: url(../images/neon-crystals.jpg);
   background-size: cover;
   background-position: center;
@@ -27,12 +26,17 @@ h1 {
   color: #c92be9;
 }
 
+h1 > i {
+  font-size: 50px;
+}
+
 /*menu area styling*/
-i{
-  font-size: 2rem;
+#game-container > i {
+  font-size: 1.5rem;
 }
 
 #game-container {
+  background-color: #763d88bf;
   position: relative;
   font-size: 2rem;
   border-radius: 40px;
@@ -68,11 +72,11 @@ i{
 }
 
 button:active {
-  background-color:#c2a9f0;
+  background-color: #c2a9f0;
 }
 
-.close-button:hover{
-  opacity:0.7;
+.close-button:hover {
+  opacity: 0.7;
   background-color: #d8d6d6;
 }
 
@@ -82,15 +86,16 @@ button:active {
 
 .close-button {
   background-color: transparent;
-  border:0;
-  font-size:20px;
+  border: 0;
+  font-size: 20px;
   cursor: pointer;
   position: absolute;
-  right:0;
-  top:2px;
+  right: 0;
+  top: 2px;
   border-radius: 50%;
   transition: all 0.2s ease-in;
 }
+
 
 #rock {
   font-size: 2rem;
@@ -99,6 +104,8 @@ button:active {
   border-radius: 200px;
   background-color: #fdfdfd;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 #paper {
@@ -108,6 +115,8 @@ button:active {
   border-radius: 200px;
   background-color: #fdfdfd;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 #scissors {
@@ -117,11 +126,14 @@ button:active {
   border-radius: 200px;
   background-color: #fdfdfd;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 /*styling for the second game*/
 
 #game-container2 {
+  background-color: rgba(210, 96, 214, 0.749);
   position: relative;
   font-size: 2rem;
   border-radius: 40px;
@@ -130,7 +142,7 @@ button:active {
   justify-content: center;
 }
 
-#play-game2{
+#play-game2 {
   font-size: 2rem;
   padding: 20px 24px;
   margin: auto;
@@ -140,8 +152,8 @@ button:active {
 
 .close-button2 {
   background-color: transparent;
-  border:0;
-  font-size:20px;
+  border: 0;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -156,6 +168,8 @@ button:active {
   border-radius: 200px;
   background-color: #fdfdfd;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 #spock {
@@ -165,6 +179,8 @@ button:active {
   border-radius: 200px;
   background-color: #fdfdfd;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .noclick {
@@ -173,53 +189,53 @@ button:active {
 
 .close-button2 {
   background-color: transparent;
-  border:0;
-  font-size:20px;
+  border: 0;
+  font-size: 20px;
   cursor: pointer;
   position: absolute;
-  right:0;
-  top:2px;
+  right: 0;
+  top: 2px;
   border-radius: 50%;
   transition: all 0.2s ease-in;
 }
 
-.close-button2:hover{
-  opacity:0.7;
+.close-button2:hover {
+  opacity: 0.7;
   background-color: #d8d6d6;
 }
 
 /*styling for the last button-container area*/
 
-#rules{
+#rules-container {
+  background-color: rgba(120, 51, 209, 0.86);;
   font-size: 2rem;
   padding: 20px 24px;
   margin: auto;
   border-radius: 20px;
-  background-color: rgba(184, 14, 184, 0.861);
 }
 
-p{
+p {
   font-size: 20px;
-    margin: 10px 10px 10px;
-    color: white;
-    display: flex;
-    position: initial;
+  margin: 10px 10px 10px;
+  color: white;
+  display: flex;
+  position: initial;
 }
 
-.close-button3{
+.close-button3 {
   background-color: transparent;
-  border:0;
-  font-size:20px;
+  border: 0;
+  font-size: 20px;
   cursor: pointer;
   position: absolute;
-  right:0;
-  top:2px;
+  right: 0;
+  top: 2px;
   border-radius: 50%;
   transition: all 0.2s ease-in;
 }
 
-.close-button3:hover{
-  opacity:0.7;
+.close-button3:hover {
+  opacity: 0.7;
   background-color: #d8d6d6;
 }
 
@@ -263,7 +279,100 @@ p{
   color: #9e75ea;
 }
 
+/* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 100;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
 
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .modalClose {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .modalClose:hover,
+        .modalClose:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
 
 /*media query for small screens(360px and up)*/
 @media screen and (min-width: 360px) {
@@ -271,7 +380,10 @@ p{
     font-size: 1rem;
   }
 
-  #play-game, #play-game2, #rules {
+  #play-game,
+  #play-game2,
+  #rules {
+    background-color: #c890da;
     font-size: 2rem;
     padding: 25px 25px;
     display: flex;
@@ -287,7 +399,7 @@ p{
     justify-content: center;
   }
 
-  h1{
+  h1 {
     font-size: 3rem;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -339,30 +451,30 @@ p{
 
 /*media query for medium size screens (765px and up)*/
 @media screen and (min-width: 765px) {
-#play-game, #play-game2,#rules {
-  font-size: 2rem;
-  padding: 20px 30px;
-  border-radius: 20px;
-  margin-top: auto;
-  margin-bottom: 20px;
-}
+  #play-game,
+  #play-game2,
+  #rules {
+    font-size: 2rem;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
 
-
-#main-title{
-  font-size:1.5rem;
-}
+  #main-title {
+    font-size: 1.5rem;
+  }
 }
 
 /*media query for tablet size screens(992px and down)*/
 @media screen and (min-width: 922px) {
-  h1{
+  h1 {
     font-size: 6rem;
-    }
+  }
 
   #main-title {
     font-size: 2.5rem;
   }
-
 
   #game-container {
     font-size: 2rem;
