@@ -28,6 +28,7 @@ h1 {
 
 h1 > i {
   font-size: 50px;
+  align-items: center;
 }
 
 /*menu area styling*/
@@ -36,21 +37,19 @@ h1 > i {
 }
 
 #game-container {
-  background-color: #763d88bf;
-  position: relative;
-  font-size: 2rem;
+  font-size: 5rem;
   border-radius: 40px;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
 }
 
+/*styling of the classicclassical  game*/
 #play-game {
+  background-color: #9b09cb;
+  color: #ffff;
   font-size: 2rem;
   padding: 20px 24px;
   margin: auto;
   border-radius: 20px;
-  background-color: rgba(184, 14, 184, 0.861);
 }
 
 .choices {
@@ -77,7 +76,7 @@ button:active {
 
 .close-button:hover {
   opacity: 0.7;
-  background-color: #d8d6d6;
+  background-color: #d6d6d8;
 }
 
 .noclick {
@@ -96,10 +95,14 @@ button:active {
   transition: all 0.2s ease-in;
 }
 
+.close-button:hover {
+  color: rgb(150, 63, 63);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #rock {
-  font-size: 2rem;
-  min-width: 60px;
+  font-size: 4rem;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #fdfdfd;
@@ -109,8 +112,7 @@ button:active {
 }
 
 #paper {
-  font-size: 2rem;
-  min-width: 60px;
+  font-size: 4rem;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #fdfdfd;
@@ -120,8 +122,7 @@ button:active {
 }
 
 #scissors {
-  font-size: 2rem;
-  min-width: 60px;
+  font-size: 4rem;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #fdfdfd;
@@ -130,10 +131,10 @@ button:active {
   padding-left: 20px;
 }
 
-/*styling for the second game*/
+/*styling for the new game*/
 
 #game-container2 {
-  background-color: rgba(210, 96, 214, 0.749);
+  background-color: #9b09cb;
   position: relative;
   font-size: 2rem;
   border-radius: 40px;
@@ -147,7 +148,8 @@ button:active {
   padding: 20px 24px;
   margin: auto;
   border-radius: 20px;
-  background-color: rgba(184, 14, 184, 0.861);
+  background-color: #9b09cb;
+  color: #ffff;
 }
 
 .close-button2 {
@@ -162,8 +164,7 @@ button:active {
 }
 
 #lizard {
-  font-size: 2rem;
-  min-width: 60px;
+  font-size: 4rem;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #fdfdfd;
@@ -173,8 +174,7 @@ button:active {
 }
 
 #spock {
-  font-size: 2rem;
-  min-width: 60px;
+  font-size: 4rem;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #fdfdfd;
@@ -200,53 +200,110 @@ button:active {
 }
 
 .close-button2:hover {
-  opacity: 0.7;
-  background-color: #d8d6d6;
-}
-
-/*styling for the last button-container area*/
-
-#rules-container {
-  background-color: rgba(120, 51, 209, 0.86);;
-  font-size: 2rem;
-  padding: 20px 24px;
-  margin: auto;
-  border-radius: 20px;
-}
-
-p {
-  font-size: 20px;
-  margin: 10px 10px 10px;
-  color: white;
-  display: flex;
-  position: initial;
-}
-
-.close-button3 {
-  background-color: transparent;
-  border: 0;
-  font-size: 20px;
+  color: rgb(150, 63, 63);
+  text-decoration: none;
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 2px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in;
 }
 
-.close-button3:hover {
-  opacity: 0.7;
-  background-color: #d8d6d6;
+/*styling for the rules */
+#rules{
+  background-color: #9b09cb;
+  color: #ffff;
 }
 
-/*game and the new version game section plus the rules*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #dedede;
+}
+
+.modal-rules-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 2px solid #73006b;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modalCloseRules {
+  color: #f5f5f5;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.modalCloseRules:hover,
+.modalCloseRules:focus {
+  color: #f1e7ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header-rules {
+  padding: 2px 16px;
+  background-color: #c555e7;
+  color: white;
+}
+
+br {
+  margin: 10px;
+}
+
+.modal-body-rules {
+  padding: 2px 16px;
+}
+
+.modal-footer-rules {
+  padding: 2px 16px;
+  background-color: #43074b;
+  color: white;
+}
+
+/*game and the new version game section */
 
 #playerDisplay,
 #computerDisplay {
   font-size: 1.5rem;
   margin: 10px 20px 0px;
   width: 30px;
-  height: 20px;
   color: #f5f5f5;
   display: flex;
   justify-content: space-evenly;
@@ -280,99 +337,95 @@ p {
 }
 
 /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 100;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(231, 226, 236);
+  /* Fallback color */
+  background-color: rgba(251, 247, 252, 0.4);
+}
 
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            border: 1px solid #888;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.4s;
-        }
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #f8f3f31b;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #8a4693;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(223, 214, 222, 0.2),
+    0 6px 20px 0 rgba(176, 141, 190, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
 
-        /* Add Animation */
-        @-webkit-keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
 
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
+  to {
+    top: 0;
+    opacity: 2;
+  }
+}
 
-        @keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
 
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
+  to {
+    top: 0;
+    opacity: 2;
+  }
+}
 
-        /* The Close Button */
-        .modalClose {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* The Close Button */
+.modalClose {
+  color: rgb(207, 213, 224);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-        .modalClose:hover,
-        .modalClose:focus {
-            color: red;
-            text-decoration: none;
-            cursor: pointer;
-        }
+.modalClose:hover,
+.modalClose:focus {
+  color: rgb(204, 28, 28);
+  text-decoration: none;
+  cursor: pointer;
+}
 
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
+.modal-header {
+  padding: 2px 16px;
+  background-color: #8021ac;
+  color: rgb(245, 242, 242);
+}
 
-        .modal-body {
-            padding: 2px 16px;
-        }
+.modal-body {
+  padding: 2px 16px;
+}
 
-        .modal-footer {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #510f6b;
+  color: rgb(236, 233, 233);
+}
 
 /*media query for small screens(360px and up)*/
 @media screen and (min-width: 360px) {
@@ -383,7 +436,7 @@ p {
   #play-game,
   #play-game2,
   #rules {
-    background-color: #c890da;
+    background-color: #9b09cb;
     font-size: 2rem;
     padding: 25px 25px;
     display: flex;
@@ -395,8 +448,6 @@ p {
     font-size: 0.5rem;
     border-radius: 20px;
     padding: 10px;
-    display: flex;
-    justify-content: center;
   }
 
   h1 {
@@ -480,9 +531,8 @@ p {
     font-size: 2rem;
     border-radius: 40px;
     padding: 10px;
-    display: flex;
-    justify-content: center;
   }
+
   #playerDisplay,
   #computerDisplay {
     font-size: 1.5rem;

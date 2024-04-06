@@ -28,63 +28,74 @@
           <button id="play-game2">Play Game 2</button>
         </div>
         <div>
-          <button id="rules">Rules of the game</button> 
+          <button id="rules">Rules of the game</button>
         </div>
       </section>
-      
-      <section id="rules-container">
-        <div class="instructions">
-          <p class="old-version">
-            The players may start by counting to three aloud, or by speaking the
-            name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand
-            in a fist and swinging it down with each syllable onto their other
-            hand (or in a less common variant, holding it behind their back).
-            They then "throw" or "shoot" by extending their selected sign
-            towards their opponent on what would have been the fourth count,
-            often saying the word "shoot" while doing so.
-          </p>
-          <br />
-          <p class="new-version">
-            The game is an expansion on the game Rock, Paper, Scissors. Each
-            player picks a variable and reveals it at the same time. The winner
-            is the one who defeats the others. In a tie, the process is repeated
-            until a winner is found. Almost always, the boys will all pick Spock
-            at the same time and tie over and over again.Scissors cuts
-            Paper,Paper covers Rock,Rock crushes Lizard, Lizard poisons
-            Spock,Spock smashes Scissors,Scissors decapitates Lizard,Lizard eats
-            Paper,Paper disproves Spock, Spock vaporizes Rock(and as it always
-            has) Rock crushes Scissors.
-          </p>
-          <div id="close-container3">
-            <div class="close-rules">
-              <button class="close-button3">&times</button>
-            </div>
+      <div id="endRulesModal">
+        <div class="modal-rules-content">
+          <div class="modal-header-rules">
+            <span class="modalCloseRules">&times;</span>
+            <h2>Instructions</h2>
+          </div>
+          <div class="modal-body-rules">
+            <h3>Before you Start</h3>
+            <p id="start-rules">
+              Only two players are needed. If there are more, have everyone pair
+              up.Explain and demonstrate the rules of play.Check for
+              understanding.
+            </p>
+            <br />
+            <p id="originalGame">
+              <strong>“Roshambo” or “Rock Paper Scissors” </strong>is played
+              together with the players hands in a fist.
+              <br />
+              <strong>How to Play</strong>
+              <br />
+              If players show the same things, they go again. If one player
+              picks rock and one scissors, the player who showed rock wins the
+              dispute.
+            </p>
+            <p id="addGame">
+              <strong>Rock, Paper, Scissors, Lizard, Spock</strong> is a game of
+              chance that expands the traditional game of Rock, Paper, Scissors.
+              It is first used to settle a dispute about what to watch on TV
+              between Sheldon and Raj in "The Lizard-Spock Expansion".
+              <br/>
+              The game is an expansion on the game Rock, Paper, Scissors. Each
+              player picks a variable and reveals it at the same time. The
+              winner is the one who defeats the others. In a tie, the process is
+              repeated until a winner is found.
+              <br/>
+              Scissors cuts Paper Paper covers Rock Rock crushes Lizard Lizard
+              poisons Spock Spock smashes Scissors Scissors decapitates Lizard
+              Lizard eats Paper Paper disproves Spock
+            </p>
+          </div>
+          <div class="modal-footer-rules">
+            <h3>Welcome and Good Luck!</h3>
           </div>
         </div>
-      </section>
-    </main>
-    <!-- The End Game Modal -->
-    <div id="endModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-          <div class="modal-header">
-              <span class="modalClose">&times;</span>
-              <h2>Modal Header</h2>
-          </div>
-          <div class="modal-body">
-              <p>PlayerScore</p>
-              <p id="modal-player-score">0</p>
-              <p>ComputerScore</p>
-              <p id="modal-computer-score">0</p>
-              <p id="modal-message">0</p>
-          </div>
-          <div class="modal-footer">
-              <h3>Modal Footer</h3>
-          </div>
       </div>
+    </main>
 
-  </div>
+    <div id="endModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modalClose">&times;</span>
+          <h2>Message from the Mastermind👻</h2>
+        </div>
+        <div class="modal-body">
+          <p>PlayerScore</p>
+          <p id="modal-player-score">Congratulation you're Rocking it!👻</p>
+          <p>ComputerScore</p>
+          <p id="modal-computer-score">☠️ What can we do?</p>
+          <p id="modal-message">Let's go at it again🤠</p>
+        </div>
+        <div class="modal-footer">
+          <h3>You're Welcome.</h3>
+        </div>
+      </div>
+    </div>
     <script src="assets/js/script.js"></script>
     <!--font awesome script-->
     <script

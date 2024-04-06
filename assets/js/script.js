@@ -2,10 +2,11 @@
 
 
 /**Menu area responsiveness coneccted to Javascript*/
-// referingreferring to game 1 or original version
+// refering to classicGame
 let playGameBtn = document.getElementById("play-game");
 let playGame2Btn = document.getElementById("play-game2");
 let container = document.getElementById("game-container");
+let rulesButton = document.getElementById("rules");
 let choices;
 let playerDisplay;
 let computerDisplay;
@@ -13,6 +14,7 @@ let resultDisplay;
 let playerScoreDisplay;
 let computerScoreDisplay;
 let logo;
+
 
 let playerScore = 0;
 let computerScore = 0;
@@ -89,79 +91,24 @@ let menu = `<div>
 <button id="rules">Rules of the game</button> 
 </div>`;
 
+
 playGameBtn.addEventListener('click', insurtGame);
 playGame2Btn.addEventListener('click', insurtGame2);
-
-//let closeContainer = document.getElementById("close-container");
-//let closeInnerContainer = "<div class='closegame'></div>";
-
-//let close2 = "<div class='closegame2'></div>"
-//let closeInnerContainer2 = document.getElementById("close-container2");
+rulesButton.addEventListener('click',openEndRulesModal);
 
 
-
-//refering to a option of closing the game once inside the game
-//closeButton.addEventListener('click', closeGame);
-
-
+//insurting the classicclassical  version of the game
 function insurtGame() {
     container.innerHTML = classicGame;
     setUpClassicGame()
 }
 
-//insurting the game and playing, game 2
+//insurting the new version of the game
 function insurtGame2() {
     container.innerHTML = newGame;
     setUpClassicGame()
     setUpNewGame()
 }
-
-// insurtin the container with rules or better said instructions
-let rulesButton = document.getElementById("rules");
-let rulesContainer = document.getElementById("rules-container");
-let rules = `<div class="instructions">
-<p class="old-version">
-  The players may start by counting to three aloud, or by speaking the
-  name of the game (e.g. "Rock! Paper! Scissors!"), raising one hand
-  in a fist and swinging it down with each syllable onto their other
-  hand (or in a less common variant, holding it behind their back).
-  They then "throw" or "shoot" by extending their selected sign
-  towards their opponent on what would have been the fourth count,
-  often saying the word "shoot" while doing so.
-</p>
-<br />
-<p class="new-version">
-  The game is an expansion on the game Rock, Paper, Scissors. Each
-  player picks a variable and reveals it at the same time. The winner
-  is the one who defeats the others. In a tie, the process is repeated
-  until a winner is found. Almost always, the boys will all pick Spock
-  at the same time and tie over and over again.Scissors cuts
-  Paper,Paper covers Rock,Rock crushes Lizard, Lizard poisons
-  Spock,Spock smashes Scissors,Scissors decapitates Lizard,Lizard eats
-  Paper,Paper disproves Spock, Spock vaporizes Rock(and as it always
-  has) Rock crushes Scissors.
-</p>
-<div id="close-container3">
-  <div class="close-rules">
-    <button class="close-button3">&times</button>
-  </div>
-</div>
-</div>`;
-
-/*closing the tructions part,menu
-let closeButton3 = document.getElementById("close-button3");
-let closeContainer3 = document.getElementById("close-container3");
-let closeInnerContainer3 = "<div class='close-rules'></div>";
-*/
-
-rulesButton.addEventListener('click', insurtRules);
-//closeButton3.removeEventListener('click', closeContainer3);
-
-function insurtRules() {
-    rulesContainer.innerHTML = rules;
-
-}
-
 
 /**
  * Declare constants for Dom elements
@@ -188,7 +135,7 @@ function setUpClassicGame() {
 }
 
 /**
- * second part of the choices,connected to the game 2
+ * second part of the choices,connected to the newGame
  */
 function setUpNewGame() {
     choices = ["rock", "paper", "scissors", "lizard", "spock"];
@@ -199,14 +146,39 @@ function setUpNewGame() {
     spockButton.addEventListener('click', playGame);
 }
 
+/**
+ * instructions part for the games 
+ * in the menu 
+ */
+let endRulesModal = document.getElementById("endRulesModal");
+// Get the <span> element that closes the modal
+let modalCloseRules = document.getElementsByClassName("modalCloseRules")[0];
 
+//when the user click on the rules of the games
+function openEndRulesModal(){
+  endRulesModal.style.display = "block";
+}
+
+function closeEndRulesmodal(){
+  endRulesModal.style.display = "none";
+
+  // go back to the main menu
+  goToMainMenu()
+}
+
+// When the user clicks on <span> (x), close the modal
+endRulesModal.addEventListener('click',closeEndRulesmodal);
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', () => {
+  if (event.target == endRulesModal) {
+      endRulesModal.style.display = "none";
+  }
+})
 
 /**
  * Gets the score of the first game from the DOM and 
  * gets the first tally of incorrect answers from the DOM 
  **/
-1
-
 function playGame(event) {
     console.log(event);
     let playerChoice = event.target.id;
@@ -219,13 +191,6 @@ function generateComputerChoice(choices, playerChoice) {
     calculateWinner(computerChoice, playerChoice);
 
 }
-
-/**
- * Gets the score for the second game  from the DOM and 
- * gets the second tally of incorrect answers from the DOM for the second game
- **/
-2
-
 
 /**
  * Gets the current tally of incorrect answers from the DOM 
@@ -254,42 +219,6 @@ function calculateWinner(computerChoice, playerChoice) {
     }
     updateScores(result, computerChoice, playerChoice)
 }
-
-
-/**
- * Gets the current tally of incorrect answers from the DOM 
- */
-/** 
-if (playerChoice === computerChoice) {
-    result = "IT'S A TIE!";
-} else {
-    switch (playerChoice) {
-        case "rock":
-            result = (computerChoice === "scissors") ? "YOU WIN!" : "Want to Quit!";
-            break;
-        case "paper":
-            result = (computerChoice === "rock") ? "YOU WIN!" : "Want to Quit!";
-            break;
-        case "scissors":
-            result = (computerChoice === "paper") ? "YOU WIN!" : "Want to Quit!";
-            break;
-        case "lizard":
-            result = (computerChoice === "spock") ? "YOU WIN!" : "Want to Quit!";
-            break;
-        case "spock":
-            result = (computerChoice === "rock") ? "YOU WIN!": "Want to Quit!";
-        case "rock":
-            result = (computer === "spock") ? "YOU WIN!": "Want to Quit!";
-        case "paper"
-         result = (computer === "lizard") ? "YOU WIN!": "Want to Quit!";
-       case "lizard":
-            result = (computerChoice === "paepaper") ? "YOU WIN!" : "Want to Quit!";
-            break;
-            
-    }
-}
-
-*/
 
 /**
  * main game function
@@ -323,19 +252,19 @@ function checkForOverallWinner() {
     let winningScore = 5;
     if (playerScore >= winningScore) {
         //add player wins pop message 
-        console.log("player-won-overall");
+        console.log("You won!");
        
         playerScoreModal.innerText = playerScore;
         computerScoreModal.innerText = computerScore;
-        modalMessage.innerText = "player-won-overall";
+        modalMessage.innerText = "You won!";
         openEndGameModal()
     } else if (computerScore >= winningScore) {
         //add player loses haha pop message
-        console.log("computer-won-haha");
+        console.log("You lost,want to leave?");
 
         playerScoreModal.innerText = playerScore;
         computerScoreModal.innerText = computerScore;
-        modalMessage.innerText = "computer-won-haha";
+        modalMessage.innerText = "You lost,want to leave?";
         openEndGameModal()
 
     } else {
@@ -344,7 +273,7 @@ function checkForOverallWinner() {
     }
 }
 
-// Get the modal
+// Get the modal for the classical game and the new version of the game
 let endGameModal = document.getElementById("endModal");
 let playerScoreModal = document.getElementById("modal-player-score");
 let computerScoreModal = document.getElementById("modal-computer-score");
@@ -361,7 +290,7 @@ function closeEndGameModal(event) {
     endGameModal.style.display = "none";
 
     // reset the players scores
-
+    
     // go back to the main menu
     goToMainMenu()
 }
