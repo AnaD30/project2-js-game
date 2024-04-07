@@ -81,7 +81,17 @@ JavaScript
 
 [Validated  code for the JSGame](https://jshint.com/)
 
+
 No errors were found when passing through the official validator _JS Hint_.
+_The following metrics were returned_:
+
+- There are 18 functions in this file.
+
+* Function with the largest signature take 3 arguments, while the median is 0.
+
++ Largest function has 15 statements in it, while the median is 2.5.
+
+* The most complex function has a cyclomatic complexity value of 17 while the median is 1.
 
 #  Accessibility 
 
