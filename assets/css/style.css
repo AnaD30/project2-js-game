@@ -33,24 +33,30 @@ h1 > i {
 
 /*menu area styling*/
 #game-container > i {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #game-container {
   font-size: 5rem;
   border-radius: 40px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /*styling of the classicclassical  game*/
-#play-game {
+.style-button{
+  font-size: 2rem;
+  display: flex;
   background-color: #9b09cb;
   color: #ffff;
   font-size: 2rem;
   padding: 20px 24px;
   margin: auto;
   border-radius: 20px;
-}
+  }
 
 .choices {
   margin-bottom: 30px;
@@ -58,7 +64,6 @@ h1 > i {
 
 .choices button {
   font-size: 2rem;
-  min-width: 60px;
   margin: 0 10px;
   border-radius: 200px;
   background-color: #c198d1a3;
@@ -84,7 +89,7 @@ button:active {
 }
 
 .close-button {
-  background-color: transparent;
+  background-color: violet;
   border: 0;
   font-size: 20px;
   cursor: pointer;
@@ -118,7 +123,6 @@ button:active {
   background-color: #fdfdfd;
   cursor: pointer;
   padding-top: 10px;
-  padding-left: 20px;
 }
 
 #scissors {
@@ -128,19 +132,19 @@ button:active {
   background-color: #fdfdfd;
   cursor: pointer;
   padding-top: 10px;
-  padding-left: 20px;
 }
 
 /*styling for the new game*/
 
-#game-container2 {
-  background-color: #9b09cb;
-  position: relative;
-  font-size: 2rem;
-  border-radius: 40px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
+.style-button-2{
+font-size: 2rem;
+display: flex;
+background-color: #9b09cb;
+color: #ffff;
+font-size: 2rem;
+padding: 20px 24px;
+margin: auto;
+border-radius: 20px;
 }
 
 #play-game2 {
@@ -153,10 +157,15 @@ button:active {
 }
 
 .close-button2 {
-  background-color: transparent;
+  background-color: violet;
   border: 0;
   font-size: 20px;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
 }
 
 .choices button:hover2 {
@@ -170,7 +179,6 @@ button:active {
   background-color: #fdfdfd;
   cursor: pointer;
   padding-top: 10px;
-  padding-left: 20px;
 }
 
 #spock {
@@ -180,24 +188,12 @@ button:active {
   background-color: #fdfdfd;
   cursor: pointer;
   padding-top: 10px;
-  padding-left: 20px;
 }
 
 .noclick {
   pointer-events: none;
 }
 
-.close-button2 {
-  background-color: transparent;
-  border: 0;
-  font-size: 20px;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 2px;
-  border-radius: 50%;
-  transition: all 0.2s ease-in;
-}
 
 .close-button2:hover {
   color: rgb(150, 63, 63);
@@ -206,12 +202,21 @@ button:active {
 }
 
 /*styling for the rules */
-#rules{
+.style-button-rules{
+  font-size: 2rem;
+  display: flex;
   background-color: #9b09cb;
   color: #ffff;
-}
+  font-size: 2rem;
+  padding: 20px 24px;
+  margin-top:10px;
+  left: 0;
+  right: 0;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  }
 
-.modal {
+#rules > .modal{
   display: none;
   position: fixed;
   z-index: 100;
@@ -350,7 +355,7 @@ br {
   height: 100%;
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgb(231, 226, 236);
+  background-color: rgb(41, 10, 72);
   /* Fallback color */
   background-color: rgba(251, 247, 252, 0.4);
 }
@@ -358,7 +363,7 @@ br {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #f8f3f31b;
+  background-color: #ffff;
   margin: auto;
   padding: 0;
   border: 1px solid #8a4693;
@@ -398,7 +403,7 @@ br {
 
 /* The Close Button */
 .modalClose {
-  color: rgb(207, 213, 224);
+  color: rgb(224, 207, 223);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -433,15 +438,18 @@ br {
     font-size: 1rem;
   }
 
-  #play-game,
-  #play-game2,
-  #rules {
-    background-color: #9b09cb;
-    font-size: 2rem;
-    padding: 25px 25px;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 40px;
+
+
+  #rules{
+      display: none;
+      display:flex;
+      margin-right: 30%;
+      margin-left: 30%;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      align-items: center;
+      cursor: pointer;
   }
 
   #game-container {
@@ -464,14 +472,11 @@ br {
 
   #playerDisplay,
   #computerDisplay {
-    font-size: 1.5rem;
+    font-size: 20px;
     margin: 10px 20px 0px;
     width: 30px;
-    height: 20px;
     color: #f5f5f5;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
+    display: table-row;
   }
 
   #resultDisplay {
@@ -502,18 +507,34 @@ br {
 
 /*media query for medium size screens (765px and up)*/
 @media screen and (min-width: 765px) {
-  #play-game,
-  #play-game2,
-  #rules {
+  #game-container {
+    font-size: 5rem;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+   
+  #rules{
+    display: none;
+    display:flex;
+    margin-right: 40%;
+    margin-left: 40%;
     font-size: 2rem;
-    padding: 20px 30px;
+    margin-bottom: 10px;
     border-radius: 20px;
-    margin-top: auto;
-    margin-bottom: 20px;
+    align-items: center;
+    cursor: pointer;
   }
 
   #main-title {
     font-size: 1.5rem;
+  }
+
+  .modalCloseRules{
+    font-size: 15px;
   }
 }
 
@@ -523,20 +544,34 @@ br {
     font-size: 6rem;
   }
 
+  #game-container {
+    font-size: 5rem;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   #main-title {
     font-size: 2.5rem;
   }
-
-  #game-container {
-    font-size: 2rem;
-    border-radius: 40px;
-    padding: 10px;
-  }
-
+  .style-button-rules{
+  display: flex;
+  margin-right: 0;
+  margin-left: 0;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  align-items: center;
+  cursor: pointer;
+}
   #playerDisplay,
   #computerDisplay {
     font-size: 1.5rem;
     margin: inherit;
+    display: table-row;
   }
 
   .scoreDisplay {

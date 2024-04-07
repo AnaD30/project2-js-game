@@ -22,16 +22,16 @@
     <main>
       <section id="game-container">
         <div>
-          <button id="play-game">Play Game</button>
+          <button class="style-button" id="play-game">Play Game</button>
         </div>
         <div>
-          <button id="play-game2">Play Game 2</button>
+          <button class="style-button-2" id="play-game2">Play Game 2</button>
         </div>
         <div>
-          <button id="rules">Rules of the game</button>
+          <button class="style-button-rules" id="rules">Rules of the game</button>
         </div>
       </section>
-      <div id="endRulesModal">
+      <div id="endRulesModal" class="modal">
         <div class="modal-rules-content">
           <div class="modal-header-rules">
             <span class="modalCloseRules">&times;</span>
@@ -40,7 +40,7 @@
           <div class="modal-body-rules">
             <h3>Before you Start</h3>
             <p id="start-rules">
-              Only two players are needed. If there are more, have everyone pair
+              Only one player are needed. If there are more, have everyone pair
               up.Explain and demonstrate the rules of play.Check for
               understanding.
             </p>
@@ -93,6 +93,23 @@
         </div>
         <div class="modal-footer">
           <h3>You're Welcome.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="quitModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="quit-modal-close" class="modalClose">&times;</span>
+          <h2>Message from the Mastermind👻</h2>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to Quit?</p>
+          <button id="quit-yes">Yes</button>
+          <button id="quit-no">No</button>
+        </div>
+        <div class="modal-footer">
+          <h3>Quitting is for Losers!</h3>
         </div>
       </div>
     </div>
