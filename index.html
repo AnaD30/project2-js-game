@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
     <!--font awesome and google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <script
@@ -28,7 +32,9 @@
           <button class="style-button-2" id="play-game2">Play Game 2</button>
         </div>
         <div>
-          <button class="style-button-rules" id="rules">Rules of the game</button>
+          <button class="style-button-rules" id="rules">
+            Rules of the game
+          </button>
         </div>
       </section>
       <div id="endRulesModal" class="modal">
@@ -40,9 +46,10 @@
           <div class="modal-body-rules">
             <h3>Before you Start</h3>
             <p id="start-rules">
-              Only one player are needed. If there are more, have everyone pair
-              up.Explain and demonstrate the rules of play.Check for
-              understanding.
+              The game is design for one player against the computer. Before we
+              start the game and begin. The following instructions and rules are
+              there to explain and make the player aware of how to play the
+              game.
             </p>
             <br />
             <p id="originalGame">
@@ -60,12 +67,12 @@
               chance that expands the traditional game of Rock, Paper, Scissors.
               It is first used to settle a dispute about what to watch on TV
               between Sheldon and Raj in "The Lizard-Spock Expansion".
-              <br/>
+              <br />
               The game is an expansion on the game Rock, Paper, Scissors. Each
               player picks a variable and reveals it at the same time. The
               winner is the one who defeats the others. In a tie, the process is
               repeated until a winner is found.
-              <br/>
+              <br />
               Scissors cuts Paper Paper covers Rock Rock crushes Lizard Lizard
               poisons Spock Spock smashes Scissors Scissors decapitates Lizard
               Lizard eats Paper Paper disproves Spock
@@ -81,7 +88,7 @@
     <div id="endModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <span class="modalClose">&times;</span>
+          <span id="endModalClose" class="modalClose">&times;</span>
           <h2>Message from the Mastermind👻</h2>
         </div>
         <div class="modal-body">
@@ -114,6 +121,65 @@
       </div>
     </div>
     <script src="assets/js/script.js"></script>
+    <!--Footer-->
+    <footer>
+      <ul class="social-networks">
+        <li>
+          <a
+            href="https://en.wikipedia.org"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit Wikipedia page!(opens in a new tab)"
+            ><i class="fa-brands fa-wikipedia-w"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit our Youtube page!(opens in a new tab)"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="http://www.facebook.com"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit our Facebook page!(opens in a new tab)"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="http://www.twitter.com"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit our Twitter page!(opens in a new tab)"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="http://www.instagram.com"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit our Instagram page!(opens in a new tab)"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.pinterest.com/pin/611434086936677424/"
+            target="_blank"
+            rel="noopner"
+            aria-label="Visit our pinterest page!(opens in a new tab)"
+            ><i class="fa-brands fa-pinterest"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
     <!--font awesome script-->
     <script
       src="https://kit.fontawesome.com/43b695c197.js"

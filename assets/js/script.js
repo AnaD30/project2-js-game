@@ -18,7 +18,6 @@ let playerScoreDisplay;
 let computerScoreDisplay;
 let logo;
 
-
 let playerScore = 0;
 let computerScore = 0;
 
@@ -94,16 +93,11 @@ let menu = `<div>
 <button class="style-button-rules" id="rules">Rules of the game</button> 
 </div>`;
 
-
-
-
-
 //insurting the classicclassical  version of the game
 function insurtGame() {
   container.innerHTML = classicGame;
   setUpClassicGame()
 }
-
 
 //insurting the new version of the game
 function insurtGame2() {
@@ -139,7 +133,6 @@ function setUpClassicGame() {
   paperButton.addEventListener('click', playGame);
   scissorsButton.addEventListener('click', playGame);
   closeGameBtn.addEventListener('click', openQuitModal);
-
 }
 
 /**
@@ -172,7 +165,7 @@ function closeEndRulesmodal() {
 }
 
 // When the user clicks on <span> (x), close the modal
-endRulesModal.addEventListener('click', closeEndRulesmodal);
+modalCloseRules.addEventListener('click', closeEndRulesmodal);
 
 
 /**
@@ -180,9 +173,7 @@ endRulesModal.addEventListener('click', closeEndRulesmodal);
  * gets the first tally of incorrect answers from the DOM 
  **/
 function playGame(event) {
-  console.log(event);
   let playerChoice = event.target.id;
-  console.log(playerChoice);
   generateComputerChoice(choices, playerChoice);
 }
 
@@ -237,11 +228,8 @@ function updateScores(result, computerChoice, playerChoice) {
       playerScoreDisplay.textContent = playerScore;
       break;
     case "Want to Quit!":
-      console.log("updateComputerScore");
-      console.log(computerScore);
       resultDisplay.classList.add("lightvioletText");
       computerScore++;
-      console.log(computerScore);
       computerScoreDisplay.textContent = computerScore;
       break;
   }
@@ -251,25 +239,18 @@ function updateScores(result, computerChoice, playerChoice) {
 function checkForOverallWinner() {
   let winningScore = 5;
   if (playerScore >= winningScore) {
-    //add player wins pop message 
-    console.log("You won!");
 
     playerScoreModal.innerText = playerScore;
     computerScoreModal.innerText = computerScore;
     modalMessage.innerText = "You won!";
     openEndGameModal()
   } else if (computerScore >= winningScore) {
-    //add player loses haha pop message
-    console.log("You lost,want to leave?");
 
     playerScoreModal.innerText = playerScore;
     computerScoreModal.innerText = computerScore;
     modalMessage.innerText = "You lost,want to leave?";
     openEndGameModal()
 
-  } else {
-    //when nobody won overall
-    console.log("play-next-round");
   }
 }
 
@@ -279,7 +260,7 @@ let playerScoreModal = document.getElementById("modal-player-score");
 let computerScoreModal = document.getElementById("modal-computer-score");
 let modalMessage = document.getElementById("modal-message");
 // Get the <span> element that closes the modal
-let modalClose = document.getElementsByClassName("modalClose")[1];
+let modalClose = document.getElementsByClassName("modalClose")[0];
 
 // When the user reaches the end of the game, open the modal 
 function openEndGameModal() {
@@ -292,7 +273,6 @@ function closeEndGameModal(event) {
   } else {
     endGameModal.style.display = "none";
   }
-
   // reset the players scores
   playerScore = 0;
   computerScore = 0;
@@ -301,7 +281,7 @@ function closeEndGameModal(event) {
   goToMainMenu()
 }
 
-//get you to zhe main menu and displays the buttons
+//get you to the main menu and displays the buttons
 function goToMainMenu() {
   container.innerHTML = menu;
   playGameBtn = document.getElementById("play-game");
