@@ -1,8 +1,8 @@
 # Come on a adventure!
-!(Responsive image,site)[assets/images/Screenshot 2024-04-07 at 19-55-40 Am I Responsive.png]
+![Responsive image,site](image.md/main%20picture.png)
 
 # The game of ROCK, PAPER, SCISSORS!
-![Main page](assets/images/Screenshot 2024-04-07 at 19-46-23 Roshambo.png)
+![Main page](image.md/main%20image.png)
 
 The game Rock,paper,sscissors,lizard, spock is a static website about that shows the user a simple,interactive game of rock, paper,scissors,lizard,spock against the computer. Also there is the classical original game with less option but all the same fun.
 
@@ -16,9 +16,9 @@ The goal of this website to bring to the user a interactive game. That also make
 
 ## The landing page image
 
-![assets/images/Screenshot 2024-04-07 at 19-46-34 Roshambo.png](Menu)
-
 ### Menu :
+
+![roshambo](image.md/menu.png)
 
 Fully responsive menu with the classic version of Rock, paper,scissor that lets the user experience a simple but enjoyable game,subtle for all ages.
 The other version is a new version of Rock, paper,scissors, lizard, Spock.Inspired by the series The Big Bang Theory. Where the origin of the new version lies.
@@ -28,19 +28,11 @@ The other version is a new version of Rock, paper,scissors, lizard, Spock.Inspir
 Here behind the first button is the original version of Rock,paper,scissors.
 A simple but interactive site with the game of Rock, paper, scissors. Urging the user to try the fun himself.
 
-![classical Game](assets/images/Screenshot 2024-04-07 at 19-46-34 Roshambo.png)
+![classical Game](image.md/game1.png)
 
 ### New Game
 
 The new version of the game with added additional difficulty of two more options: lizard and Spock. Inspired by the American series of The Big Bang Theory. Even more challenging and engaging for the user to try.
-
-![new Game](assets/images/Screenshot 2024-04-07 at 19-47-09 Roshambo.png)
-
-### Rules
-
-Here are some instruction and explanation on the game and the explanation on how to use or play the games.
-
-![Instruction](assets/images/Screenshot 2024-04-07 at 19-47-49 Roshambo.png)
 
 #### The original version and the explanation for use:
 
@@ -50,18 +42,26 @@ The rock is a closed fist; paper is a flat hand with fingers and thumb extended 
 
 The rules are like those of the basic Rock Paper Scissors game, but with 2 extra movements. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and rock crushes scissors.
 
+![new Game](image.md/game2.png)
+
+### Rules
+
+Here are some instruction and explanation on the game and the explanation on how to use or play the games.
+
+![Instruction](image.md/rules.png)
+
 ### A small message for the winner 
+![Message's for various instances of the game](image.md/message1.png)
 
 We designed the game that after five rounds, the winner player or the computer the get a quick message. For recognised win or also if they have lost so the player. Also when exiting the game the get a messega. 
 
-![Message's for various instances of the game](assets/images/Screenshot 2024-04-07 at 19-48-28 Roshambo.png)
-![Message's for various instances of the game](assets/images/Screenshot 2024-04-07 at 20-09-48 Roshambo.png)
+![Message's for various instances of the game](image.md/message2.png)
 
 # Footer
 
 The footer section includes links to the relevant social media sites for Roshambo. The links will open to a new tab to allow easy navigation for the user. The footer is valuable to the user as it encourages them to keep connected via social media.
 
-![Footer of the page](assets/images/Screenshot 2024-04-07 at 19-46-42 Roshambo.png)
+![Footer of the page](image.md/footer.png)
 
 ### Validator Testing
 Validator Testing
@@ -97,7 +97,7 @@ _The following metrics were returned_:
 
 I check the accessibility of the page through the lighthouse tool.
 
-![assets/images/Posnetek zaslona 2024-04-07 201454.png](Lighthouse)
+![Lighthouse](image.md/lighthouse.png)
 
 ## Solved Bugs
 
@@ -128,15 +128,15 @@ Additional resources for information and specific part of JavaScript.
 
 Also as additional resource and information or studying. 
 
-+[https://www.youtube.com/results?search_query=bro+code]
+* [https://www.youtube.com/results?search_query=bro+code]
 
-+[https://www.youtube.com/@WebDevSimplified](Web Dev Simplified)
+- [https://www.youtube.com/@WebDevSimplified](Web Dev Simplified)
 
-+[https://www.youtube.com/@AniaKubow](Code with Ania Kubow)
++ [https://www.youtube.com/@AniaKubow](Code with Ania Kubow)
 
-+[https://www.youtube.com/@TraversyMedia](Traseversy Media)
+* [https://www.youtube.com/@TraversyMedia](Traseversy Media)
 
-[https://www.youtube.com/@CleverProgrammer](Clever Programmer)
+- [https://www.youtube.com/@CleverProgrammer](Clever Programmer)
 
 #### Font Awesome:
 
@@ -154,3 +154,5 @@ From the source section drop-down menu, select the Master Branch
 Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 [Project 2 - game](https://anad30.github.io/project2-js-game/)
+
+[def]: Menu
