@@ -277,7 +277,6 @@ function closeEndGameModal(event) {
   // reset the players scores
     playerScore = 0;
     computerScore = 0;
- 
 
   // go back to the main menu
   goToMainMenu();
