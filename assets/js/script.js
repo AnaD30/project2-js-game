@@ -96,19 +96,19 @@ let menu = `<div>
 //insurting the classicclassical  version of the game
 function insurtGame() {
   container.innerHTML = classicGame;
-  setUpClassicGame()
+  setUpClassicGame();
 }
 
 //insurting the new version of the game
 function insurtGame2() {
   container.innerHTML = newGame;
-  setUpClassicGame()
-  setUpNewGame()
+  setUpClassicGame();
+  setUpNewGame();
 }
 
 //insurting rules of the game 
 function insurtRules() {
-  openEndRulesModal()
+  openEndRulesModal();
 }
 
 /**
@@ -208,7 +208,7 @@ function calculateWinner(computerChoice, playerChoice) {
         break;
     }
   }
-  updateScores(result, computerChoice, playerChoice)
+  updateScores(result, computerChoice, playerChoice);
 }
 
 /**
@@ -233,7 +233,7 @@ function updateScores(result, computerChoice, playerChoice) {
       computerScoreDisplay.textContent = computerScore;
       break;
   }
-  checkForOverallWinner()
+  checkForOverallWinner();
 }
 
 function checkForOverallWinner() {
@@ -243,13 +243,13 @@ function checkForOverallWinner() {
     playerScoreModal.innerText = playerScore;
     computerScoreModal.innerText = computerScore;
     modalMessage.innerText = "You won!";
-    openEndGameModal()
+    openEndGameModal();
   } else if (computerScore >= winningScore) {
 
     playerScoreModal.innerText = playerScore;
     computerScoreModal.innerText = computerScore;
     modalMessage.innerText = "You lost,want to leave?";
-    openEndGameModal()
+    openEndGameModal();
 
   }
 }
@@ -273,13 +273,16 @@ function closeEndGameModal(event) {
   } else {
     endGameModal.style.display = "none";
   }
+
   // reset the players scores
-  playerScore = 0;
-  computerScore = 0;
+    playerScore = 0;
+    computerScore = 0;
+ 
 
   // go back to the main menu
-  goToMainMenu()
+  goToMainMenu();
 }
+
 
 //get you to the main menu and displays the buttons
 function goToMainMenu() {
@@ -315,6 +318,6 @@ window.addEventListener('click', () => {
   } else if (event.target == endRulesModal) {
     endRulesModal.style.display = "none";
   }
-})
+});
 
 document.addEventListener('DOMContentLoaded', goToMainMenu);
